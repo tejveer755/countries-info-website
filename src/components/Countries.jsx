@@ -5,7 +5,7 @@ const Countries = ({ countries,  }) => {
     <div className="countries">
       {countries.map(country => (
       
-        <Link to={`/country/${country.cca3}`} key={country.cca3}>
+        <Link to={`/countries-info-website/country/${country.cca3}`} key={country.cca3}>
           
           <div className="card expand" >
             <img
