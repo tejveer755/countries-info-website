@@ -43,7 +43,7 @@ const CountryDetail = () => {
     }
 
     const handleBackClick = () => {
-        navigate('/');
+        navigate('/countries-info-website/');
     };
 
     return (
@@ -67,7 +67,7 @@ const CountryDetail = () => {
                         <h3>Border Countries:</h3>
                         {borders.length > 0 ? (
                             borders.map((borderCountry) => (
-                                <Link to={`/country/${borderCountry.cca3}`} key={borderCountry.cca3} className='border'>
+                                <Link to={`/countries-info-website/country/${borderCountry.cca3}`} key={borderCountry.cca3} className='border'>
                                     {borderCountry.name.common}
                                 </Link>
                             ))
