@@ -55,7 +55,7 @@ function App() {
         ) : (
           <Routes>
             <Route
-              path="/"
+              path="/countries-info-website/"
               element={
                 <>
                   <FilterSection selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} setSearchQuery={setSearchQuery} />
