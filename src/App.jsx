@@ -63,7 +63,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/country/:countryCode" element={<CountryDetail />} />
+            <Route path="/countries-info-website/country/:countryCode" element={<CountryDetail />} />
           </Routes>
         )}
       </main>
