@@ -63,7 +63,7 @@ const Pagination = ({
     } else {
       return (
         <ul>
-          {currentPage > 1 && <button onClick={prevPageBtn}> {"< prev"} </button>}
+          {currentPage > 1 && <button onClick={prevPageBtn}>Prev </button>}
           {pageNumbers.map((pageNumber) => (
             <li key={pageNumber}>
               <button
@@ -74,7 +74,7 @@ const Pagination = ({
               </button>
             </li>
           ))}
-          {currentPage < pageNumbers.length && <button onClick={nextPageBtn}>next > </button>}
+          {currentPage < pageNumbers.length && <button onClick={nextPageBtn}>Next </button>}
         </ul>
       );
     }
