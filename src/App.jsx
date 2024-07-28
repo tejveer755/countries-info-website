@@ -79,7 +79,7 @@ function App() {
               element={
                 <>
                   <FilterSection selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} setSearchQuery={setSearchQuery} />
-                  <Countries countries={filteredCountries} />
+                  <Countries countries={currentCountries} />
                   <Pagination
                     countriesPerPage={countriesPerPage}
                     totalCountries={filteredCountries.length}
