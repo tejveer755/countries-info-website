@@ -1,8 +1,23 @@
-# React + Vite
+# Countries Info Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web application that provides information about countries around the world.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Search for countries by name, capital, or region
+* Filter countries by region or language
+* View detailed information about each country, including:
+	+ Flag and map
+	+ Capital and population
+	+ Language and currency
+	+ Bordering countries and more
+* Pagination for easy navigation through the list of countries
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* React
+* RESTful API (for country data)
+
