@@ -5,6 +5,7 @@ import axios from 'axios';
 import FilterSection from './components/FilterSection';
 import Countries from './components/Countries';
 import CountryDetail from './components/CountryDetail';
+import Pagination from './components/Pagination';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -12,6 +13,7 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
 
 
   useEffect(() => {
@@ -43,6 +45,24 @@ function App() {
     setFilteredCountries(filtered);
   }, [selectedRegion, searchQuery, countries]);
 
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const nextPageBtn = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevPageBtn = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
+  const countriesPerPage = 25;
+  const indexOfLastCountry = currentPage * countriesPerPage;
+  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
+  const currentCountries = filteredCountries.slice(indexOfFirstCountry, indexOfLastCountry);
+
   return (
     <Router>
       <main>
@@ -60,6 +80,14 @@ function App() {
                 <>
                   <FilterSection selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} setSearchQuery={setSearchQuery} />
                   <Countries countries={filteredCountries} />
+                  <Pagination
+                    countriesPerPage={countriesPerPage}
+                    totalCountries={filteredCountries.length}
+                    paginate={paginate}
+                    nextPageBtn={nextPageBtn}
+                    prevPageBtn={prevPageBtn}
+                    currentPage={currentPage}
+                  />
                 </>
               }
             />
